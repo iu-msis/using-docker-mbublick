@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+<head>
+  <title>My Page Title</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="books.html">Books<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="information.html">User Information<span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+
+  </div>
+</nav>
+<main>
+
+<h1>Books Available</h1>
+<table id="bookstable" class="table">
+  <thead>
+    <tr>
+      <th scope="col">Title</th>
+      <th scope="col">Author(s)</th>
+      <th scope="col">Year Published</th>
+      <th scope="col">Publisher</th>
+      <th scope="col">Page Count</th>
+      <th scope="col">MSRP</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>To Kill a Mockingbird</td>
+      <td>Harber Lee</td>
+      <td>1960</td>
+      <td>J.B. Lippincott & Co.</td>
+      <td>296</td>
+      <td>$4.10</td>
+    </tr>
+    <tr>
+      <td>The Great Gatsby</td>
+      <td>F. Scott Fitzgerald</td>
+      <td>1925</td>
+      <td>Charles Scribner's Sons</td>
+      <td>218</td>
+      <td>$4.99</td>
+    </tr>
+    <tr>
+      <td>The Catcher in the Rye</td>
+      <td>J.D. Salinger</td>
+      <td>1951</td>
+      <td>Little, Brown and Company</td>
+      <td>277</td>
+      <td>$5.99</td>
+    </tr>
+    <tr>
+      <td>Of Mice and Men</td>
+      <td>John Steinbeck</td>
+      <td>1937</td>
+      <td>Pascal Covici</td>
+      <td>187</td>
+      <td>$2.99</td>
+    </tr>
+  </tbody>
+</table>
+<form>
+
+  <div class="form-group">
+    <label for="inputAddress">Title:</label>
+    <input type="text" class="form-control" placeholder="Enter title">
+  </div>
+  <div class="form-group">
+    <label for="inputAddress">Author(s):</label>
+    <input type="text" class="form-control" placeholder="Enter author(s)">
+  </div>
+  <div class="form-group">
+    <label for="inputAddress">Year Published:</label>
+    <input type="number" class="form-control" placeholder="Enter year published">
+  </div>
+  <div class="form-group">
+    <label for="inputAddress">Publisher:</label>
+    <input type="text" class="form-control" placeholder="Enter publisher">
+  </div>
+  <div class="form-group">
+    <label for="inputAddress">Page Count:</label>
+    <input type="number" class="form-control" placeholder="Enter page count">
+  </div>
+  <div class="form-group">
+    <label for="inputAddress">MSRP:</label>
+    <input type="number" class="form-control" placeholder="Enter MSRP">
+  </div>
+  <button type="submit" class="btn btn-primary">Add</button>
+</form>
+</main>
+<script src="js/tablesort.min.js"></script>
+<script>
+  new Tablesort(document.getElementById('bookstable'));
+</script>
+</body>
+</html>
