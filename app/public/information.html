@@ -38,11 +38,14 @@
 </a>
   <p>Source: Google images</p>
   </div>
-<div class="profiletxt">
-<p>Name: Harrison Ford</p>
-<p>Country: United States</p>
-<p>Birthdate: July 13, 1942</p>
-<p>Age: 77</p>
-<p>Email: <a href="mailto:ishotfirst@example.com">ishotfirst@example.com</a></p>
+<div class="profiletxt" id="user">
+<p>Name: {{user.name.first}}</p>
+<p>Country: {{user.location.timezone.description}}</p>
+<p>Birthdate: {{user.dob.date}}</p>
+<p>Age: {{user.dob.age}}</p>
+<p>Email: {{user.email}}</p>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="js/randomuser.js"></script>
+</body>
 </main>
