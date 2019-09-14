@@ -32,19 +32,25 @@
 </nav>
 <main>
   <h1>User Information</h1>
-  <div class="imgtxt" id="txtimg">
-  <a href="img/profile.jpg">
-  <img src="img/profile.jpg">
+
+
 </a>
-  <p>Source: Google images</p>
+  <p>Source: randomuser.me</p>
   </div>
+<div class="picture" id="user">
+<a v-bind:href="user.picture.large">
+<img class="pictureThumbnail" v-bind:src="user.picture.medium" id="randomPicture"></a>
+
 <div class="profiletxt" id="user">
+
 <p>Name: {{user.name.first}}</p>
-<p>Country: {{user.location.timezone.description}}</p>
+<p>State: {{user.location.state}}</p>
 <p>Birthdate: {{user.dob.date}}</p>
 <p>Age: {{user.dob.age}}</p>
-<p>Email: {{user.email}}</p>
+<p>Email:<a href="{{user.email}}">{{user.email}}</a></p>
 </div>
+</div>
+<button type="submit" class="btn btn-primary">Refresh</button>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="js/randomuser.js"></script>
 </body>
