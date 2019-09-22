@@ -1,7 +1,14 @@
 var waitingApp = new Vue({
   el: '#user',
   data: {
-    user: {}
+    user: {
+      name:"",
+      dob:"",
+      age:"",
+      email:"",
+      nat:"",
+      picture:""
+    }
   },
   methods: {
     fetchUser() {
